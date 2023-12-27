@@ -5,7 +5,8 @@
 [![License][mit-badge]][mit-url]
 
  unifi-activity-statistics is a Node.js module that allows you to listen for activity statistics and shows you the current RX and TX speeds from a specified port on your UnfiFi Dreammachine (UniFi is Ubiquiti Networks wifi controller software).
- This package is based on the work of oznu's [unifi-events](https://www.npmjs.com/package/unifi-events). Please follow the link to buy him a coffee.
+ This package is heavily based on the work of oznu's [unifi-events](https://www.npmjs.com/package/unifi-events).  
+ Please follow the link and buy him a coffee.
 
 ## Requirements
 
@@ -19,21 +20,22 @@
 ## Example
 
 ```javascript
-const Unifi = require('unifi-events')
+const UnifiActivityStatistics = require('unifi-activity-statistics');
 
-const unifi = new Unifi({
-  host: 'unifi',                        // The hostname or ip address of the unifi controller (default: 'unifi')
-  port: 8443,                           // Port of the unifi controller (default: 8443)
-  username: 'admin',                    // Username (default: 'admin').
-  password: 'ubnt',                     // Password (default: 'ubnt').
-  site: 'default',                      // The UniFi site to connect to (default: 'default').
-  insecure: true,                       // Allow connections if SSL certificate check fails (default: false).
-  unifios: false                        // For devices with UnifiOS turn this on
+let unifi = new UnifiActivityStatistics({
+  host:             'unifi',    // The hostname or ip address of the unifi controller (default: 'unifi')
+  port:             8443,       // Port of the unifi controller (default: 8443)
+  username:         'admin',    // Username (default: 'admin').
+  password:         'ubnt',     // Password (default: 'ubnt').
+  uplink_interface: 'eth9',     // Port you want to listen to (default: eth9).
+  site:             'default',  // The UniFi site to connect to (default: 'default').
+  insecure:         true,       // Allow connections if SSL certificate check fails (default: false).
+  unifios:          true        // For devices with UnifiOS turn this on
 });
 
-// Listen for any event
-unifi.on('**', function (data) {
-  console.log(this.event, data);
+// Listen for event
+unifi.on('uplink_activity', (data) => {
+ console.log('RX: ' + (data.rx / 125000).toFixed(2) + ' TX: ' + (data.tx / 125000).toFixed(2));
 });
 ```
 
