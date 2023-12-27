@@ -4,9 +4,9 @@
 [![npm](https://img.shields.io/npm/dt/unifi-activity-statistics.svg)](https://www.npmjs.com/package/unifi-activity-statistics)
 [![License][mit-badge]][mit-url]
 
- unifi-activity-statistics is a Node.js module that allows you to listen for activity statistics and shows you the current RX and TX speeds from a specified port on your UnfiFi Dreammachine (UniFi is Ubiquiti Networks wifi controller software).
- This package is heavily based on the work of oznu's [unifi-events](https://www.npmjs.com/package/unifi-events).  
- Please follow the link and buy him a coffee.
+ unifi-activity-statistics is a Node.js module that allows you to listen for activity statistics and shows you the current RX and TX speeds from a specified port on your UnfiFi Dreammachine (UniFi is Ubiquiti Networks wifi controller software).  
+   
+ This package is heavily based on the awesome work of oznu's [unifi-events](https://www.npmjs.com/package/unifi-events). Please follow the link and buy him a coffee.
 
 ## Requirements
 
