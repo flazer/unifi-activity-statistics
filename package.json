@@ -1,0 +1,49 @@
+{
+  "name": "unifi-activity-statistics",
+  "description": "listen for for rx/tx activity statistics on specified port via Unifi Socket (Ubiquiti Wifi).",
+  "version": "1.0.0",
+  "license": "MIT",
+  "author": "flazer <info@flazer.net>",
+  "contributors": [
+    "flazer <info@flazer.net>",
+    "oznu <dev@oz.nu>",
+    "hobbyquaker <https://github.com/hobbyquaker>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flazer/unifi-activity-statistics.git"
+  },
+  "bugs": {
+    "url": "https://github.com/flazer/unifi-activity-statistics/issues"
+  },
+  "homepage": "https://github.com/flazer/unifi-activity-statistics#readme",
+  "main": "index.js",
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "funding": [
+    {
+      "type": "paypal",
+      "url": "https://paypal.me/flazer"
+    }
+  ],
+  "keywords": [
+    "unifi",
+    "ubiquiti",
+    "ubnt",
+    "wifi",
+    "api",
+    "statistics",
+    "rxtx",
+    "activity"
+  ],
+  "dependencies": {
+    "eventemitter2": "^5.0.1",
+    "request": "^2.83.0",
+    "request-promise": "^4.2.2",
+    "ws": "^4.0.0"
+  },
+  "devDependencies": {
+    "camo-purge": "latest"
+  }
+}
