@@ -139,7 +139,7 @@ module.exports = class UnifiActivityStatistics extends EventEmitter {
     _uplink(data) {
         if (data && data.port_table) {
             data.port_table.forEach(stats => {
-               if (stats && stats.ifname && stats.ifname == 'eth9') {
+               if (stats && stats.ifname && stats.ifname == this.opts.uplink_interface) {
                   if ('rx_bytes-r' in stats && 'tx_bytes-r' in stats) {
                       this.emit('uplink_activity', {'rx': stats['rx_bytes-r'], 'tx': stats['tx_bytes-r']});
                   }
