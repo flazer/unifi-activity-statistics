@@ -1,7 +1,7 @@
 {
   "name": "unifi-activity-statistics",
   "description": "listen for for rx/tx activity statistics on specified port via Unifi Socket (Ubiquiti Wifi).",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "MIT",
   "author": "flazer <info@flazer.net>",
   "contributors": [
